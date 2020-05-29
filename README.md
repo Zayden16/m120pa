@@ -7,3 +7,4 @@ This repo is intended to serve as the center of this Project. All Code and Docum
 
 # GloBoard:
 Progress can be tracked at any time on the GloBoard linked here: https://app.gitkraken.com/glo/board/XseLUHpYPQARN_-e
+Userstories and other important tasks are documented here
