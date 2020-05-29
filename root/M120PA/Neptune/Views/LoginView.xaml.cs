@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Deployment;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,10 +26,9 @@ namespace Neptune.Views
 			InitializeComponent();
 		}
 
-		private void Grid_Loaded(object sender, RoutedEventArgs e)
+		private void ExitButton_OnClick(object sender, RoutedEventArgs e)
 		{
-			this.MouseDown += delegate { DragMove(); };
+			System.Windows.Application.Current.Shutdown();
 		}
-
 	}
 }
