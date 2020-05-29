@@ -1,0 +1,15 @@
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\bin\Debug\Neptune.exe.config
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\bin\Debug\Neptune.exe
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\bin\Debug\Neptune.pdb
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\obj\Debug\Neptune.csprojAssemblyReference.cache
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\obj\Debug\MainWindow.g.cs
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\obj\Debug\App.g.cs
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\obj\Debug\Neptune_MarkupCompile.cache
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\obj\Debug\Neptune_MarkupCompile.lref
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\obj\Debug\MainWindow.baml
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\obj\Debug\Neptune.g.resources
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\obj\Debug\Neptune.Properties.Resources.resources
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\obj\Debug\Neptune.csproj.GenerateResource.cache
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\obj\Debug\Neptune.csproj.CoreCompileInputs.cache
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\obj\Debug\Neptune.exe
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\obj\Debug\Neptune.pdb
