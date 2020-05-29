@@ -25,3 +25,8 @@ C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\NeptunePrototype\obj\Debug\Neptu
 C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\NeptunePrototype\obj\Debug\NeptunePrototype.csproj.CopyComplete
 C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\NeptunePrototype\obj\Debug\NeptunePrototype.exe
 C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\NeptunePrototype\obj\Debug\NeptunePrototype.pdb
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\NeptunePrototype\bin\Debug\MaterialDesignColors.dll
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\NeptunePrototype\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\NeptunePrototype\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\NeptunePrototype\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\NeptunePrototype\bin\Debug\MaterialDesignThemes.Wpf.xml

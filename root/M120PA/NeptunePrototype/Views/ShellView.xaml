@@ -4,8 +4,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:NeptunePrototype.Views"
-        mc:Ignorable="d" FontSize="11"
-        Title="ShellView" Height="500" Width="800">
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="ShellView" Height="400" Width="500">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"></ColumnDefinition>
@@ -25,12 +32,13 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="20"></RowDefinition>
         </Grid.RowDefinitions>
+
         <Label Grid.Row="1" Grid.Column="1">Full Name</Label>
         <TextBlock Text="{Binding Path=FullName, Mode=OneWay}"  Grid.Row="1" Grid.Column="2"></TextBlock>
         <Label Grid.Row="2" Grid.Column="1">First Name</Label>
         <TextBox x:Name="FirstName" MinWidth="100" Grid.Row="2" Grid.Column="2"></TextBox>
         <Label Grid.Row="3" Grid.Column="1">Last Name</Label>
         <TextBox x:Name="LastName" MinWidth="100" Grid.Row="3" Grid.Column="2"></TextBox>
-
     </Grid>
+
 </Window>
