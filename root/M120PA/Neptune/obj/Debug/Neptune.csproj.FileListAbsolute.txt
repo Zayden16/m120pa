@@ -28,3 +28,5 @@ C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\obj\Debug\GeneratedInter
 C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\obj\Debug\App.baml
 C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\obj\Debug\Views\LoginView.g.cs
 C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\obj\Debug\Views\LoginView.baml
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\bin\Debug\Dapper.dll
+C:\Users\Yazdan Musa\Desktop\m120pa\root\M120PA\Neptune\bin\Debug\Dapper.xml

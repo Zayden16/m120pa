@@ -13,7 +13,8 @@
         Background="{DynamicResource MaterialDesignDarkBackground}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         WindowStyle="None" WindowStartupLocation="CenterScreen"
-        Title="LoginView" Height="650" Width="400" ResizeMode="NoResize" BorderThickness="0">
+        Title="LoginView" Height="650" Width="400" ResizeMode="NoResize" BorderThickness="0"
+        Loaded ="OnLoad">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -33,10 +34,10 @@
         <Image Source="../Media/logo-main-200px.png"  Height="184" Margin="103,38,103,0" Grid.Row="7" VerticalAlignment="Top"/>
         <TextBlock Grid.Row="7" Grid.Column="0" Margin="56,262,56,327">Username:</TextBlock>
         <TextBlock Grid.Row="7" Grid.Column="0" Margin="56,227,56,362" Foreground="#515151"></TextBlock>
-        <TextBox  Grid.Row="7" Grid.Column="0" MinWidth="100" Background="#515151" Margin="56,288,56,293"></TextBox>
+        <TextBox x:Name="UserName" Grid.Row="7" Grid.Column="0" MinWidth="100" Background="#515151" Margin="56,288,56,293"></TextBox>
         <TextBlock Grid.Row="7" Grid.Column="0" Margin="56,322,56,269">Password:</TextBlock>
-        <PasswordBox Grid.Row="7" Grid.Column="0" MinWidth="100" Background="#515151" Margin="56,346,56,235"></PasswordBox>
-        <Button Grid.Row="7" Grid.Column="0" Margin="56,385,56,193" >Login</Button>
+        <PasswordBox x:Name="Password" Grid.Row="7" Grid.Column="0" MinWidth="100" Background="#515151" Margin="56,346,56,235"></PasswordBox>
+        <Button x:Name="LoginButton" Click="LoginButton_OnClick" Grid.Row="7" Grid.Column="0" Margin="56,385,56,193" >Login</Button>
         <Button x:Name="ExitButton" Click="ExitButton_OnClick" Grid.Row="7" Grid.Column="0" Margin="278,568,10,10" >Exit</Button>
     </Grid>
 

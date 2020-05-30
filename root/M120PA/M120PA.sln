@@ -1,8 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neptune", "Neptune\Neptune.csproj", "{299826B5-0B01-4C2B-A0B5-99C4C4489295}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeptunePrototype", "NeptunePrototype\NeptunePrototype.csproj", "{464DF807-045B-4136-8A86-1F7270DFACFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "etc", "etc", "{F4916640-49DE-44A6-9BD5-9073C6EBDD70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +23,11 @@ Global
 		{464DF807-045B-4136-8A86-1F7270DFACFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{464DF807-045B-4136-8A86-1F7270DFACFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{464DF807-045B-4136-8A86-1F7270DFACFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53625637-208C-4FC2-982E-894D06290C3C}
 	EndGlobalSection
 EndGlobal

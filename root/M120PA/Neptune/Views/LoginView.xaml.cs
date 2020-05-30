@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Neptune.Models;
 
 namespace Neptune.Views
 {
@@ -21,9 +22,33 @@ namespace Neptune.Views
 	/// </summary>
 	public partial class LoginView : Window
 	{
+		List<User> users = new List<User>();
+		private User _inputUser;
+
 		public LoginView()
 		{
 			InitializeComponent();
+		}
+		
+		private void OnLoad(object sender, RoutedEventArgs e)
+		{
+			DataAccess db = new DataAccess();
+			users = db.GetUsers();
+		}
+
+		private void LoginButton_OnClick(object sender, RoutedEventArgs e)
+		{
+			_inputUser.UserName = UserName.Text;
+			_inputUser.Password = Password.Password;
+
+			if (users.Contains(_inputUser))
+			{
+
+			}
+			else
+			{
+				throw new Exception("User not found");
+			}
 		}
 
 		private void ExitButton_OnClick(object sender, RoutedEventArgs e)
