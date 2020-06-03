@@ -15,3 +15,8 @@ Secondary Color: ![#303030](https://via.placeholder.com/15/303030/000000?text=+)
 Tertiary Color: ![#515151](https://via.placeholder.com/15/515151/000000?text=+) `#515151`         
 
 To Make the UI look better, the NuGet MaterialDesignThemes.Wpf was installed and the Windows Skinned.
+
+# Mockups:
+## LoginView:
+![LoginView](https://github.com/Zayden16/m120pa/blob/master/docs/images/LoginView.png)  
+In this View the User can login to his already exisiting account. Additionally, there is a Logo, exit button and a login button.
