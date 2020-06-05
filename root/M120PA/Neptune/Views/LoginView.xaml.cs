@@ -43,16 +43,11 @@ namespace Neptune.Views
 			InputUser.Password = Password.Password;
 
 			var loginSuccess= db.GetUserByNameAndPassword(InputUser.UserName, InputUser.Password);
-
-			if (loginSuccess != null)
-			{
-				throw new Exception("Hurray, you logged in!");
-			}
 		}
 
 		private void ExitButton_OnClick(object sender, RoutedEventArgs e)
 		{
-			System.Windows.Application.Current.Shutdown();
+			this.Close();
 		}
 	}
 }
