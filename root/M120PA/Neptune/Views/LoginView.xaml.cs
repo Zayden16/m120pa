@@ -22,9 +22,10 @@ namespace Neptune.Views
 	/// </summary>
 	public partial class LoginView : Window
 	{
-		List<User> users = new List<User>();
-		private User _inputUser;
-
+		List<User> _users = new List<User>();
+		private readonly User InputUser = new User();
+		public User LoggedInUser = new User();
+		DataAccess db = new DataAccess();
 		public LoginView()
 		{
 			InitializeComponent();
@@ -32,22 +33,20 @@ namespace Neptune.Views
 		
 		private void OnLoad(object sender, RoutedEventArgs e)
 		{
-			DataAccess db = new DataAccess();
-			users = db.GetUsers();
+			
+			_users = db.GetUsers();
 		}
 
 		private void LoginButton_OnClick(object sender, RoutedEventArgs e)
 		{
-			_inputUser.UserName = UserName.Text;
-			_inputUser.Password = Password.Password;
+			InputUser.UserName = UserName.Text;
+			InputUser.Password = Password.Password;
 
-			if (users.Contains(_inputUser))
-			{
+			var loginSuccess= db.GetUserByNameAndPassword(InputUser.UserName, InputUser.Password);
 
-			}
-			else
+			if (loginSuccess != null)
 			{
-				throw new Exception("User not found");
+				throw new Exception("Hurray, you logged in!");
 			}
 		}
 
