@@ -33,3 +33,6 @@ In thie View the User can see the Users. Only an Administrator User can see this
 
 ## InfoView: 
 Misc View with diverse Information.
+
+# ER Diagram:
+![ER](https://github.com/Zayden16/m120pa/blob/master/docs/images/neptunDataDiagram.png)  
