@@ -3,7 +3,7 @@
 * [GloBoard](#globoard)
 
 # Description
-This repo is intended to serve as the center of this Project. All Code and Documentation will be checked in here. User Stories and Tasks will be tracked in GitKraken GloBoards. 
+This repo is intended to serve as the center of this Project. All Code and Documentation will be checked in here. User Stories and Tasks will be tracked in GitKraken GloBoards. Security is not a concern here so all Passwords will be saved as plaintext.
 
 # GloBoard:
 Progress can be tracked at any time on the GloBoard linked here: https://app.gitkraken.com/glo/board/XseLUHpYPQARN_-e
@@ -20,3 +20,10 @@ To Make the UI look better, the NuGet MaterialDesignThemes.Wpf was installed and
 ## LoginView:
 ![LoginView](https://github.com/Zayden16/m120pa/blob/master/docs/images/LoginView.png)  
 In this View the User can login to his already exisiting account. Additionally, there is a Logo, exit button and a login button.
+
+## MainView:
+
+In this View the User can see Alerts and statistics on the go. Additionally this view has a Navigation bar to facilitate Navigation between the Views.
+
+## ListView:
+In this View the User can see all his Entries. Additionally 
