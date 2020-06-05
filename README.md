@@ -18,11 +18,18 @@ To Make the UI look better, the NuGet MaterialDesignThemes.Wpf was installed and
 
 # Mockups:
 ![Mockups](https://github.com/Zayden16/m120pa/blob/master/docs/images/Mockups.png)  
+
+## LoginView:
 In this View the User can login to his already exisiting account. Additionally, there is a Logo, exit button and a login button.
 
 ## MainView:
+In this View the User can see Alerts and Statistics on the go.
 
-In this View the User can see Alerts and statistics on the go. Additionally this view has a Navigation bar to facilitate Navigation between the Views.
+## CarsView:
+In this View the User can see all of the Cars in the Database. Additionally he can add new Cars and delete existing ones.
 
-## ListView:
-In this View the User can see all his Entries. Additionally 
+## UsersView: 
+In thie View the User can see the Users. Only an Administrator User can see this View. Additionally he can add new Users and delete existing ones.
+
+## InfoView: 
+Misc View with diverse Information.
