@@ -8,7 +8,8 @@
     * [MainView](#mainview)
     * [CarsView](#carsview)
     * [UsersVIew](#usersview)
-    * [InfoView](#infoview)
+    * [InfoView](#infoview)  
+* [ER Diagram](#er-diagram)  
 
 # Description:
 This repo is intended to serve as the center of this Project. All Code and Documentation will be checked in here. User Stories and Tasks will be tracked in GitKraken GloBoards. Security is not a concern here so all Passwords will be saved as plaintext.
@@ -28,7 +29,7 @@ To Make the UI look better, the NuGet MaterialDesignThemes.Wpf was installed and
 Please look at the Kanban board Tickets on GitKraken Globoards.
 
 # Prototype:
-The Tutorial which was used to create the Prototype was: [WPF in C# with MVVM using Caliburn Micro by Tim COrey](https://youtu.be/laPFq3Fhs8k). It is a very basic and rudimentary Prototype of little to none Significance, as I decided to focus on the Main Project as soon as I got a simple MVVM Pattern up.
+The Tutorial which was used to create the Prototype was: [WPF in C# with MVVM using Caliburn Micro by Tim Corey](https://youtu.be/laPFq3Fhs8k). It is a very basic and rudimentary Prototype of little to none Significance, as I decided to focus on the Main Project as soon as I got a simple MVVM Pattern up.
 
 # Mockups:
 ![Mockups](https://github.com/Zayden16/m120pa/blob/master/docs/images/Mockups.png)  
