@@ -96,6 +96,7 @@
     </Compile>
     <Compile Include="DataAccess.cs" />
     <Compile Include="DatabaseHelper.cs" />
+    <Compile Include="Models\Car.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="Views\LoginView.xaml.cs">

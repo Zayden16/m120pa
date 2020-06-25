@@ -18,8 +18,16 @@ namespace Neptune
 		{
 			using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(DatabaseHelper.CnnVal("NeptuneDB")))
 			{
-				var users= connection.Query<User>("SELECT * FROM Users").ToList();
-				return users;
+                try
+                {
+                    var users = connection.Query<User>("SELECT * FROM Users").ToList();
+                    return users;
+				}
+                catch (Exception e)
+                {
+					MessageBox.Show(e.Message, "Oops! There was an exception!", MessageBoxButton.OK);
+					throw;
+                }
 			}
 		}
 
