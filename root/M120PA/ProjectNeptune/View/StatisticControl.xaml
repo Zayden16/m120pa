@@ -1,0 +1,54 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProjectNeptune.View"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="ProjectNeptune.View.StatisticControl"
+             mc:Ignorable="d" 
+             Background="#ffffff"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+
+        <materialDesign:Card MinHeight="150" MinWidth="150"
+                             Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top">
+            <Grid>
+                <Label HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Nirmala UI">Number of Users</Label>
+                <TextBox Text="{Binding NumberOfUsers}"  IsReadOnly="True" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Nirmala UI" FontSize="48" FontWeight="Bold"></TextBox>
+            </Grid>
+        </materialDesign:Card>
+
+        <materialDesign:Card MinHeight="150" MinWidth="150"
+                             Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Padding="0">
+            <Grid>
+                <Label HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Nirmala UI">Number of Cars</Label>
+                <TextBox Text="{Binding NumberOfCars}"  IsReadOnly="True" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Nirmala UI" FontSize="48" FontWeight="Bold"></TextBox>
+            </Grid>
+        </materialDesign:Card>
+
+        <materialDesign:Card MinHeight="150" MinWidth="150"
+                             Grid.Column="3" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Padding="0">
+            <Grid>
+                <Label HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Nirmala UI">Most Popular Make</Label>
+                <TextBox Text="{Binding MostPopularMake}"  IsReadOnly="True" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Nirmala UI" FontSize="12" FontWeight="Bold"></TextBox>
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+
+
+</UserControl>

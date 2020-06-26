@@ -8,6 +8,7 @@ using System.Windows;
 using System.Windows.Input;
 using ProjectNeptune.Base;
 using ProjectNeptune.Model;
+using ProjectNeptune.View;
 
 namespace ProjectNeptune.ViewModel
 {
@@ -42,6 +43,8 @@ namespace ProjectNeptune.ViewModel
             }
         }
 
+        public Action CloseAction { get; set; }
+
         #endregion
 
         #region Commands
@@ -51,7 +54,7 @@ namespace ProjectNeptune.ViewModel
          
         private void OnExitCommand(object sender)
         {
-            Environment.Exit(0);
+            CloseAction();
         }
 
         private ICommand _loginCommand;
@@ -60,9 +63,11 @@ namespace ProjectNeptune.ViewModel
         private void OnLoginCommand(object sender)
         {
             var authdUser = db.GetUserByNameAndPassword(_inputUser.UserName, _inputUser.Password);
-            if (authdUser.UserName == _inputUser.UserName)
+            if (authdUser.UserId != 0)
             {
-
+                var view = new MainView();
+                view.Show();
+                CloseAction();
             }
         }
 

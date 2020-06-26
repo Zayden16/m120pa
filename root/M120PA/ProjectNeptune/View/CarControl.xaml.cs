@@ -10,24 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using ProjectNeptune.ViewModel;
 
 namespace ProjectNeptune.View
 {
     /// <summary>
-    /// Interaction logic for LoginView.xaml
+    /// Interaction logic for CarControl.xaml
     /// </summary>
-    public partial class LoginView : Window
+    public partial class CarControl : UserControl
     {
-        public LoginView()
+        public CarControl()
         {
             InitializeComponent();
-
-            var viewModel = new LoginViewModel();
-            DataContext = viewModel;
-            if (viewModel.CloseAction == null)
-                viewModel.CloseAction = new Action(this.Close);
         }
     }
 }

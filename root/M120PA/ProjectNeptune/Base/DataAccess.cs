@@ -10,7 +10,7 @@ using ProjectNeptune.Model;
 
 namespace ProjectNeptune.Base
 {
-	class DataAccess
+    public class DataAccess
     {
         public List<User> GetUsers()
         {
@@ -48,6 +48,56 @@ namespace ProjectNeptune.Base
                 }
             }
             return authorizedUser;
+        }
+
+        public int CountUsers()
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(DatabaseHelper.CnnVal("NeptuneDB")))
+            {
+                try
+                {
+                    int numberOfUsers = connection.QuerySingle<int>("SELECT COUNT(UserID) FROM Users");
+                    return numberOfUsers;
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message, "Oops! There was an exception!", MessageBoxButton.OK);
+                    throw;
+                }
+            }
+        }
+        public int CountCars()
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(DatabaseHelper.CnnVal("NeptuneDB")))
+            {
+                try
+                {
+                    int numberOfCars = connection.QuerySingle<int>("SELECT COUNT(CarID) FROM Cars");
+                    return numberOfCars;
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message, "Oops! There was an exception!", MessageBoxButton.OK);
+                    throw;
+                }
+            }
+        }
+
+        public string GetMostPopularMake()
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(DatabaseHelper.CnnVal("NeptuneDB")))
+            {
+                try
+                {
+                    string mostPopularMake= connection.QuerySingle<string>("SELECT TOP(1) Marke FROM Cars GROUP BY Marke ORDER BY COUNT(*) DESC");
+                    return mostPopularMake;
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message, "Oops! There was an exception!", MessageBoxButton.OK);
+                    throw;
+                }
+            }
         }
     }
 }

@@ -16,18 +16,15 @@ using ProjectNeptune.ViewModel;
 namespace ProjectNeptune.View
 {
     /// <summary>
-    /// Interaction logic for LoginView.xaml
+    /// Interaction logic for MainView.xaml
     /// </summary>
-    public partial class LoginView : Window
+    public partial class MainView : Window
     {
-        public LoginView()
+        public MainView()
         {
             InitializeComponent();
-
-            var viewModel = new LoginViewModel();
+            var viewModel = new MainViewModel();
             DataContext = viewModel;
-            if (viewModel.CloseAction == null)
-                viewModel.CloseAction = new Action(this.Close);
         }
     }
 }
