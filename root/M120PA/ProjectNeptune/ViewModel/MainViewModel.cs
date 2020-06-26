@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Neptune.ViewModels
+namespace ProjectNeptune.ViewModel
 {
-    class MainViewModel
+    class MainViewModel : BaseViewModel
     {
+        public BaseViewModel ViewModel { get; set; }
     }
 }

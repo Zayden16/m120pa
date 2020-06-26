@@ -11,17 +11,21 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProjectNeptune.ViewModel;
 
-namespace Neptune.Views
+namespace ProjectNeptune.View
 {
     /// <summary>
-    /// Interaction logic for MainView.xaml
+    /// Interaction logic for LoginView.xaml
     /// </summary>
-    public partial class MainView : Window
+    public partial class LoginView : Window
     {
-        public MainView()
+        public LoginView()
         {
             InitializeComponent();
+
+            var viewModel = new LoginViewModel();
+            DataContext = viewModel;
         }
     }
 }
