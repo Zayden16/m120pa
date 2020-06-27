@@ -25,7 +25,6 @@ namespace ProjectNeptune.ViewModel
 
         public ICommand SatisticControlCommand => _statisticControlCommand ?? (_statisticControlCommand = new RelayCommand(OnStatisticControl));
         private ICommand _statisticControlCommand;
-
         private void OnStatisticControl(object sender)
         {
             if (ViewModel is StatisticViewModel)
@@ -38,14 +37,13 @@ namespace ProjectNeptune.ViewModel
 
         public ICommand CarControlCommand => _carControlCommand ?? (_carControlCommand = new RelayCommand(OnCarControl));
         private ICommand _carControlCommand;
-
         private void OnCarControl(object sender)
         {
-            if (ViewModel is CarControl)
+            if (ViewModel is CarViewModel)
             {
                 return;
             }
-            ViewModel = new CarControl();
+            ViewModel = new CarViewModel();
         }
     }
 }

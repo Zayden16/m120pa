@@ -17,7 +17,6 @@ namespace ProjectNeptune.ViewModel
                 OnPropertyChange();
             }
         }
-
         private int _numberOfUsers;
 
         public int NumberOfCars
@@ -42,11 +41,23 @@ namespace ProjectNeptune.ViewModel
         }
         private string _mostPopularMake;
 
+        public string MostPopularModel
+        {
+            get => _mostPopularModel;
+            set
+            {
+                _mostPopularModel = value;
+                OnPropertyChange();
+            }
+        }
+        private string _mostPopularModel;
+
         public StatisticViewModel()
         {
             NumberOfUsers = db.CountUsers();
             NumberOfCars = db.CountCars();
             MostPopularMake = db.GetMostPopularMake();
+            MostPopularModel = db.GetMostPopularModel();
         }
     }
 }

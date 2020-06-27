@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace ProjectNeptune.View
 {
     /// <summary>
-    /// Interaction logic for StatisticControl.xaml
+    /// Interaction logic for StatisticView.xaml
     /// </summary>
-    public partial class StatisticControl : UserControl
+    public partial class StatisticView : UserControl
     {
-        public StatisticControl()
+        public StatisticView()
         {
             InitializeComponent();
         }

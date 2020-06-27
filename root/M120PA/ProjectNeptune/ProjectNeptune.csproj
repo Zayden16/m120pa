@@ -70,6 +70,7 @@
     </Reference>
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -100,8 +101,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ViewModel\StatisticViewModel.cs" />
-    <Compile Include="View\CarControl.xaml.cs">
-      <DependentUpon>CarControl.xaml</DependentUpon>
+    <Compile Include="View\CarView.xaml.cs">
+      <DependentUpon>CarView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
@@ -109,8 +110,8 @@
     <Compile Include="View\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\StatisticControl.xaml.cs">
-      <DependentUpon>StatisticControl.xaml</DependentUpon>
+    <Compile Include="View\StatisticView.xaml.cs">
+      <DependentUpon>StatisticView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -146,7 +147,7 @@
     <Resource Include="Media\Icons\car.png" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="View\CarControl.xaml">
+    <Page Include="View\CarView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -158,7 +159,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\StatisticControl.xaml">
+    <Page Include="View\StatisticView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -8,14 +8,14 @@
         xmlns:hamburgerMenu="clr-namespace:HamburgerMenu;assembly=HamburgerMenu"
         xmlns:viewModels="clr-namespace:ProjectNeptune.ViewModel"
         mc:Ignorable="d"
-        Title="MainView" Height="450" Width="800">
+        Title="MainView" Height="450" Width="855.5">
 
     <Window.Resources>
         <DataTemplate DataType="{x:Type viewModels:StatisticViewModel}">
-            <local:StatisticControl/>
+            <local:StatisticView/>
         </DataTemplate>
         <DataTemplate DataType="{x:Type viewModels:CarViewModel}">
-            <local:StatisticControl/>
+            <local:CarView/>
         </DataTemplate>
     </Window.Resources>
 

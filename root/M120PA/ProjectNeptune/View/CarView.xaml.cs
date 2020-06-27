@@ -12,17 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ProjectNeptune.ViewModel;
 
 namespace ProjectNeptune.View
 {
     /// <summary>
     /// Interaction logic for CarControl.xaml
     /// </summary>
-    public partial class CarControl : UserControl
+    public partial class CarView : UserControl
     {
-        public CarControl()
+        public CarView()
         {
             InitializeComponent();
+
+            var viewModel = new CarViewModel();
+            DataContext = viewModel;
         }
     }
 }

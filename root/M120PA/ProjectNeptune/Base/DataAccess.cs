@@ -29,6 +29,41 @@ namespace ProjectNeptune.Base
             }
         }
 
+        public List<Car> GetCars()
+        {
+            using (IDbConnection connection =
+                new System.Data.SqlClient.SqlConnection(DatabaseHelper.CnnVal("NeptuneDB")))
+            {
+                try
+                {
+                    var carsList = connection.Query<Car>("SELECT * FROM Cars").ToList();
+                    return carsList;
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message, "Oops! There was an exception!", MessageBoxButton.OK);
+                    throw;
+                }
+            }
+        }
+
+        public void WriteCar(Car inputCar)
+        {
+            using (IDbConnection connection =
+                new System.Data.SqlClient.SqlConnection(DatabaseHelper.CnnVal("NeptuneDB")))
+            {
+                try
+                {
+                    var insertCarQuery = "INSERT INTO Cars VALUES (@CarID, @Marke, @Model, @FIN, @Kennzeichen)";
+                    var insertCar = connection.Execute(insertCarQuery, inputCar);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw;
+                }
+            }
+        }
         public User GetUserByNameAndPassword(string username, string password)
         {
             User authorizedUser = new User();
@@ -66,6 +101,7 @@ namespace ProjectNeptune.Base
                 }
             }
         }
+
         public int CountCars()
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(DatabaseHelper.CnnVal("NeptuneDB")))
@@ -91,6 +127,23 @@ namespace ProjectNeptune.Base
                 {
                     string mostPopularMake= connection.QuerySingle<string>("SELECT TOP(1) Marke FROM Cars GROUP BY Marke ORDER BY COUNT(*) DESC");
                     return mostPopularMake;
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message, "Oops! There was an exception!", MessageBoxButton.OK);
+                    throw;
+                }
+            }
+        }
+
+        public string GetMostPopularModel()
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(DatabaseHelper.CnnVal("NeptuneDB")))
+            {
+                try
+                {
+                    string mostPopularModel = connection.QuerySingle<string>("SELECT TOP(1) Model FROM Cars GROUP BY Model ORDER BY COUNT(*) DESC");
+                    return mostPopularModel;
                 }
                 catch (Exception e)
                 {

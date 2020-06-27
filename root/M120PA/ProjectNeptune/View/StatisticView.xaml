@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProjectNeptune.View"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="ProjectNeptune.View.StatisticControl"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="ProjectNeptune.View.StatisticView"
              mc:Ignorable="d" 
              Background="#ffffff"
              d:DesignHeight="450" d:DesignWidth="800">
@@ -26,7 +26,7 @@
         </Grid.ColumnDefinitions>
 
         <materialDesign:Card MinHeight="150" MinWidth="150"
-                             Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top">
+                             Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top">
             <Grid>
                 <Label HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Nirmala UI">Number of Users</Label>
                 <TextBox Text="{Binding NumberOfUsers}"  IsReadOnly="True" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Nirmala UI" FontSize="48" FontWeight="Bold"></TextBox>
@@ -46,6 +46,14 @@
             <Grid>
                 <Label HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Nirmala UI">Most Popular Make</Label>
                 <TextBox Text="{Binding MostPopularMake}"  IsReadOnly="True" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Nirmala UI" FontSize="12" FontWeight="Bold"></TextBox>
+            </Grid>
+        </materialDesign:Card>
+
+        <materialDesign:Card MinHeight="150" MinWidth="150"
+                             Grid.Column="4" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Padding="0">
+            <Grid>
+                <Label HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Nirmala UI">Most Popular Model</Label>
+                <TextBox Text="{Binding MostPopularModel}"  IsReadOnly="True" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Nirmala UI" FontSize="12" FontWeight="Bold"></TextBox>
             </Grid>
         </materialDesign:Card>
     </Grid>
