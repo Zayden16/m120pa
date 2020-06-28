@@ -8,7 +8,8 @@
         xmlns:hamburgerMenu="clr-namespace:HamburgerMenu;assembly=HamburgerMenu"
         xmlns:viewModels="clr-namespace:ProjectNeptune.ViewModel"
         mc:Ignorable="d"
-        Title="MainView" Height="450" Width="855.5">
+        Title="MainView" Height="450" Width="855.5"
+        Icon="../Media/logo-main-200px-color.png">
 
     <Window.Resources>
         <DataTemplate DataType="{x:Type viewModels:StatisticViewModel}">
@@ -16,6 +17,9 @@
         </DataTemplate>
         <DataTemplate DataType="{x:Type viewModels:CarViewModel}">
             <local:CarView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:InfoViewModel}">
+            <local:InfoView/>
         </DataTemplate>
     </Window.Resources>
 
@@ -27,6 +31,7 @@
         <hamburgerMenu:HamburgerMenu MaxWidth="150"  Background="#3f51b5" MenuIconColor="White" SelectionIndicatorColor="#303030" IsOpen="False" MenuItemForeground="White" HorizontalAlignment="Left">
             <hamburgerMenu:HamburgerMenuItem Icon="../Media/Icons/home.png" Text="Home" SelectionCommand="{Binding SatisticControlCommand}"/>
             <hamburgerMenu:HamburgerMenuItem Icon="../Media/Icons/car.png" Text="Cars" SelectionCommand="{Binding CarControlCommand}"/>
+            <hamburgerMenu:HamburgerMenuItem Icon="../Media/logo-main-200px-dark.png" Text="Info" SelectionCommand="{Binding InfoControlCommand}"/>
         </hamburgerMenu:HamburgerMenu>
 
         <ContentControl Grid.Column="1" Content="{Binding ViewModel}" />

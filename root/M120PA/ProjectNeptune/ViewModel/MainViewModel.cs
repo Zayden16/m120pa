@@ -45,5 +45,19 @@ namespace ProjectNeptune.ViewModel
             }
             ViewModel = new CarViewModel();
         }
+
+        public ICommand InfoControlCommand =>
+            _infoControlCommand ?? (_infoControlCommand = new RelayCommand(OnInfoControl));
+        private ICommand _infoControlCommand;
+
+        private void OnInfoControl(object sender)
+        {
+            if (ViewModel is InfoViewModel)
+            {
+                return;
+            }
+
+            ViewModel = new InfoViewModel();
+        }
     }
 }

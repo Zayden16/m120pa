@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectNeptune.View"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
-        mc:Ignorable="d"
-        Title="LoginView" Height="580.18" Width="396.328" ResizeMode="NoResize">
+        mc:Ignorable="d" Height="580.18" Width="396.328" ResizeMode="NoResize"
+        Icon="../Media/logo-main-200px-color.png">
     <Grid>
         <Image Height="150" Margin="118,45,122,0" VerticalAlignment="Top" Width="150" HorizontalAlignment="Center" Source="../Media/logo-main-200px.png"/>
         <Button Content="Login" Command="{Binding LoginCommand}" HorizontalAlignment="Left" Margin="42,340,0,0" VerticalAlignment="Top" Width="317" FontFamily="Nirmala UI Semilight"/>

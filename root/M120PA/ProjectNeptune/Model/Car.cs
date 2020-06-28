@@ -12,16 +12,7 @@ namespace ProjectNeptune.Model
         public int CarId { get; set; }
         public string Marke { get; set; }
         public string Model { get; set; }
-        public string FIN {
-            get => FIN;
-            set
-            {
-                if (Regex.IsMatch(value, @"^[0-9]{17}$"))
-                {
-                    FIN = value;
-                }
-            }
-        }
+        public string FIN { get; set; }
         public string Kennzeichen { get; set; }
     }
 }

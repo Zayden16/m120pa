@@ -73,7 +73,7 @@ namespace ProjectNeptune.Base
             {
                 try
                 {
-                    var result = connection.QuerySingle<User>(sql, parameters);
+                    var result = connection.QuerySingle<User>(sql, parameters, commandTimeout:5);
                     authorizedUser.UserId = result.UserId;
                     authorizedUser.UserName = result.UserName;
                 }

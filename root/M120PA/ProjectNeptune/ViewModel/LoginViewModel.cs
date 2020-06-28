@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -63,14 +64,12 @@ namespace ProjectNeptune.ViewModel
         private void OnLoginCommand(object sender)
         {
             var authdUser = db.GetUserByNameAndPassword(_inputUser.UserName, _inputUser.Password);
-            if (authdUser.UserId != 0)
-            {
-                var view = new MainView();
-                view.Show();
-                CloseAction();
+            if (authdUser.UserId != 0) {
+                    var view = new MainView();
+                    view.Show();
+                    CloseAction();
             }
         }
-
         #endregion
     }
 }
