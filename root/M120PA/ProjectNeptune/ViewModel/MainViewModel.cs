@@ -31,8 +31,8 @@ namespace ProjectNeptune.ViewModel
             {
                 return;
             }
-            ViewModel = new StatisticViewModel();
 
+            ViewModel = new StatisticViewModel();
         }
 
         public ICommand CarControlCommand => _carControlCommand ?? (_carControlCommand = new RelayCommand(OnCarControl));
@@ -43,6 +43,7 @@ namespace ProjectNeptune.ViewModel
             {
                 return;
             }
+
             ViewModel = new CarViewModel();
         }
 
@@ -58,6 +59,20 @@ namespace ProjectNeptune.ViewModel
             }
 
             ViewModel = new InfoViewModel();
+        }
+
+        public ICommand UserControlCommand =>
+            _userControlCommand ?? (_userControlCommand = new RelayCommand(OnUserControl));
+        private ICommand _userControlCommand;
+
+        private void OnUserControl(object sender)
+        {
+            if (ViewModel is UserViewModel)
+            {
+                return;
+            }
+
+            ViewModel = new UserViewModel();
         }
     }
 }

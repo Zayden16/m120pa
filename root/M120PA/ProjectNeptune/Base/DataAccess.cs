@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using Dapper;
@@ -47,15 +48,37 @@ namespace ProjectNeptune.Base
             }
         }
 
-        public void WriteCar(Car inputCar)
+        public bool WriteCar(Car inputCar)
         {
+            if (inputCar.CarId < 0)
+            {
+                return false;
+            }
+            if (!string.IsNullOrEmpty(inputCar.Kennzeichen))
+            {
+                return false;
+            }
+            if (!Regex.IsMatch(inputCar.FIN, "@^[0-9]{17}$")) //FIN must have 17 decimal places
+            {
+                return false;
+            }
+            if (!string.IsNullOrEmpty(inputCar.Marke))
+            {
+                return false;
+            }
+            if (!string.IsNullOrEmpty(inputCar.Model))
+            {
+                return false;
+            }
+
             using (IDbConnection connection =
                 new System.Data.SqlClient.SqlConnection(DatabaseHelper.CnnVal("NeptuneDB")))
             {
                 try
                 {
-                    var insertCarQuery = "INSERT INTO Cars VALUES (@CarID, @Marke, @Model, @FIN, @Kennzeichen)";
+                    var insertCarQuery = "INSERT INTO Cars (CarID, Marke, Model, FIN, Kennzeichen ) VALUES (@CarID, @Marke, @Model, @FIN, @Kennzeichen)";
                     var insertCar = connection.Execute(insertCarQuery, inputCar);
+                    return true;
                 }
                 catch (Exception e)
                 {
@@ -64,6 +87,7 @@ namespace ProjectNeptune.Base
                 }
             }
         }
+
         public User GetUserByNameAndPassword(string username, string password)
         {
             User authorizedUser = new User();

@@ -21,6 +21,9 @@
         <DataTemplate DataType="{x:Type viewModels:InfoViewModel}">
             <local:InfoView/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:UserViewModel}">
+            <local:UserView/>
+        </DataTemplate>
     </Window.Resources>
 
     <Grid>
@@ -31,6 +34,7 @@
         <hamburgerMenu:HamburgerMenu MaxWidth="150"  Background="#3f51b5" MenuIconColor="White" SelectionIndicatorColor="#303030" IsOpen="False" MenuItemForeground="White" HorizontalAlignment="Left">
             <hamburgerMenu:HamburgerMenuItem Icon="../Media/Icons/home.png" Text="Home" SelectionCommand="{Binding SatisticControlCommand}"/>
             <hamburgerMenu:HamburgerMenuItem Icon="../Media/Icons/car.png" Text="Cars" SelectionCommand="{Binding CarControlCommand}"/>
+            <hamburgerMenu:HamburgerMenuItem Icon="../Media/Icons/user.png" Text="Users" SelectionCommand="{Binding UserControlCommand}"/>
             <hamburgerMenu:HamburgerMenuItem Icon="../Media/logo-main-200px-dark.png" Text="Info" SelectionCommand="{Binding InfoControlCommand}"/>
         </hamburgerMenu:HamburgerMenu>
 
