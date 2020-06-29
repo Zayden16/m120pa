@@ -7,4 +7,23 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Row="1" Grid.Column="1" Margin="259,31,291,173" RenderTransformOrigin="0.488,0.513" Source="logo-main-200px-color.png"/>
+        <Label HorizontalContentAlignment="Center" Content="Project Neptune" Grid.Column="1" HorizontalAlignment="Left" Margin="253,276,0,0" Grid.Row="1" VerticalAlignment="Top" Width="242" FontFamily="Nirmala UI" FontSize="22"/>
+        <Label HorizontalContentAlignment="Center" Grid.Column="1" HorizontalAlignment="Left" Margin="253,332,0,0" Grid.Row="1" VerticalAlignment="Top" Width="242" FontFamily="Nirmala UI" FontSize="22">
+            <Hyperlink NavigateUri="https://github.com/Zayden16/m120pa" RequestNavigate="Hyperlink_OnRequestNavigate">GitHub</Hyperlink>
+        </Label>
+    </Grid>
 </UserControl>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -13,14 +14,14 @@ namespace ProjectNeptune.Base
 {
     public class DataAccess
     {
-        public List<User> GetUsers()
+        public ObservableCollection<User> GetUsers()
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(DatabaseHelper.CnnVal("NeptuneDB")))
             {
                 try
                 {
-                    var users = connection.Query<User>("SELECT * FROM Users").ToList();
-                    return users;
+                    var usersList = connection.Query<User>("SELECT * FROM Users").ToList();
+                    return new ObservableCollection<User>(usersList);
                 }
                 catch (Exception e)
                 {
@@ -30,7 +31,7 @@ namespace ProjectNeptune.Base
             }
         }
 
-        public List<Car> GetCars()
+        public ObservableCollection<Car> GetCars()
         {
             using (IDbConnection connection =
                 new System.Data.SqlClient.SqlConnection(DatabaseHelper.CnnVal("NeptuneDB")))
@@ -38,7 +39,7 @@ namespace ProjectNeptune.Base
                 try
                 {
                     var carsList = connection.Query<Car>("SELECT * FROM Cars").ToList();
-                    return carsList;
+                    return new ObservableCollection<Car>(carsList);
                 }
                 catch (Exception e)
                 {
@@ -54,19 +55,19 @@ namespace ProjectNeptune.Base
             {
                 return false;
             }
-            if (!string.IsNullOrEmpty(inputCar.Kennzeichen))
+            if (string.IsNullOrEmpty(inputCar.Kennzeichen))
             {
                 return false;
             }
-            if (!Regex.IsMatch(inputCar.FIN, "@^[0-9]{17}$")) //FIN must have 17 decimal places
+            if (string.IsNullOrEmpty(inputCar.FIN))
             {
                 return false;
             }
-            if (!string.IsNullOrEmpty(inputCar.Marke))
+            if (string.IsNullOrEmpty(inputCar.Marke))
             {
                 return false;
             }
-            if (!string.IsNullOrEmpty(inputCar.Model))
+            if (string.IsNullOrEmpty(inputCar.Model))
             {
                 return false;
             }
@@ -77,7 +78,37 @@ namespace ProjectNeptune.Base
                 try
                 {
                     var insertCarQuery = "INSERT INTO Cars (CarID, Marke, Model, FIN, Kennzeichen ) VALUES (@CarID, @Marke, @Model, @FIN, @Kennzeichen)";
-                    var insertCar = connection.Execute(insertCarQuery, inputCar);
+                    connection.Execute(insertCarQuery, inputCar);
+                    return true;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw;
+                }
+            }
+        }
+
+        public bool WriteUser(User inputUser)
+        {
+            if (string.IsNullOrEmpty(inputUser.UserName))
+            {
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(inputUser.Password))
+            {
+                return false;
+            }
+
+            using (IDbConnection connection =
+                new System.Data.SqlClient.SqlConnection(DatabaseHelper.CnnVal("NeptuneDB")))
+            {
+                try
+                {
+                    var insertUserQuery = "INSERT INTO Users (UserName, Password) VALUES (@UserName, @Password)";
+                    connection.Execute(insertUserQuery, inputUser);
+
                     return true;
                 }
                 catch (Exception e)

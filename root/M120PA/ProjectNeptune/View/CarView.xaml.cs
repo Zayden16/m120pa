@@ -28,5 +28,6 @@ namespace ProjectNeptune.View
             var viewModel = new CarViewModel();
             DataContext = viewModel;
         }
+
     }
 }
